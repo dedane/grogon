@@ -33,7 +33,9 @@
             filled>
             </v-text-field> -->
             <v-text-field
-            append-icon='mdi-eye'
+            :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+            :type="show1 ? 'text': 'password'"
+            @click:append="show1 = !show1"
             label='Password'
             v-model='Password'
             filled>
@@ -50,13 +52,13 @@
             v-model='Certificate'
             filled>
             </v-text-field> -->
-            <v-file-input
+            <!-- <v-file-input
             prepend-icon='mdi-camera'
             label='Mechanic Pic'
             accept='image/*'
             v-model='MechanicPic'
             filled >
-            </v-file-input>
+            </v-file-input> -->
             <!-- <v-file-input
             accept='image/png, image/jpeg, image/bmp'
             append-icon='mdi-camera'
@@ -76,7 +78,7 @@
             @click="submitForm()">
               Sign Up
             </v-btn>
-            </v-row>
+            <!-- </v-row>
             <v-row class='mt-8' align='center' justify='center'>
               or join us with
             </v-row>
@@ -95,7 +97,7 @@
               large fab>
                 <v-icon>mdi-facebook</v-icon>
               </v-btn>
-            </v-row>
+            </v-row> -->
           </v-form>
         </v-col>
     </v-row>
@@ -121,7 +123,8 @@ export default {
       /* Location: '', */
       Password: '',
       Phonenumber: '',
-      MechanicPic: '',
+      show1: false,
+      /* MechanicPic: '', */
       /* Certificate: '', */
     };
   },
@@ -132,7 +135,7 @@ export default {
         Email: this.Email,
         Password: this.Password,
         Phonenumber: this.Phonenumber,
-        MechanicPic: this.MechanicPic,
+        /* MechanicPic: this.MechanicPic, */
         /* Certificate: this.Certificate, */
       })
         .then(() => {

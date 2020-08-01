@@ -33,9 +33,17 @@
             filled>
             </v-text-field> -->
             <v-text-field
-            append-icon='mdi-eye'
+            :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+            :type="show1 ? 'text': 'password'"
+            @click:append="show2 = !show2"
             label='Password'
             v-model='Password'
+            filled>
+            </v-text-field>
+            <v-text-field
+            append-icon='mdi-phone'
+            label='Phone number'
+            v-model='Phonenumber'
             filled>
             </v-text-field>
             <v-text-field
@@ -135,6 +143,7 @@ export default {
   },
   data: () => ({
     menu: false,
+    show2: false,
     Name: '',
     Email: '',
     /* VehicleImage: '', */
