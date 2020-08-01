@@ -22,19 +22,42 @@
     </v-btn>
   </v-col>
   <v-spacer/>
-  <v-avatar>
+  <v-avatar @click="dialog = true">
     <v-img
       src='https://ik.imagekit.io/ugyodiq15/Mcdonalds-1023x675_rjGQLUAjR.jpg'
       alt='user'
       >
     </v-img>
   </v-avatar>
+  <v-dialog v-model='dialog' persistent max-width='300'>
+    <v-card>
+      <v-card-title
+      :append-icon='mdi-person'>
+        Name
+      </v-card-title>
+      <v-card-subtitle>
+        Joy Lebo
+      </v-card-subtitle>
+       <v-card-title
+       :append-icon='mdi-phone'>
+        Phone Number
+      </v-card-title>
+      <v-card-subtitle>
+        +254 701113792
+      </v-card-subtitle>
+      <v-card-actions>
+        <v-btn color='success' @click="dialog = false">Awesome</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
   </v-toolbar>
 </template>
 
 <script>
 export default {
-
+  data: () => ({
+    dialog: false,
+  }),
 };
 </script>
 
