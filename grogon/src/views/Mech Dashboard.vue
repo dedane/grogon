@@ -40,23 +40,28 @@
     </v-container>
     <v-container>
       <v-card>
-        <v-simple-table>
+        <v-simple-table
+        :dense='dense'
+        :fixed-header='fixedHeader'
+        :height='height'>
+        <template v-slot:default>
           <thead>
             <tr>
-            <th class='text-left'>Car Owner</th>
-            <th class='text-left'>Date</th>
-            <th class='text-left'>Rating</th>
-            <th class='text-left'>Status</th>
+            <th class='text-center'>Car Owner</th>
+            <th class='text-center'>Date</th>
+            <th class='text-center'>Rating</th>
+            <th class='text-center'>Status</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+            <tr v-for="driver in drivers" :key="driver.name">
+              <td class='text-center'>{{ driver.name }}</td>
+              <td class='text-center'>{{ driver.date }}</td>
+              <td class='text-center'>{{ driver.rating }}</td>
+              <td class='text-center'>{{ driver.status }}</td>
             </tr>
           </tbody>
+        </template>
         </v-simple-table>
       </v-card>
     </v-container>
@@ -78,6 +83,16 @@ export default {
   },
   data: () => ({
     rating: 4,
+    fixedHeader: false,
+    height: 300,
+    drivers: [
+      {
+        name: 'Joy Nice',
+        date: '24/7/2020',
+        rating: '5',
+        status: 'completed',
+      },
+    ],
   }),
 };
 </script>
