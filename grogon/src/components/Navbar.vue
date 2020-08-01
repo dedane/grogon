@@ -20,8 +20,15 @@
     text>
     Carowner
     </v-btn>
-
   </v-col>
+  <v-spacer/>
+  <v-avatar>
+    <v-img
+      src='https://ik.imagekit.io/ugyodiq15/Mcdonalds-1023x675_rjGQLUAjR.jpg'
+      alt='user'
+      >
+    </v-img>
+  </v-avatar>
   </v-toolbar>
 </template>
 

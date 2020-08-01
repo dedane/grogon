@@ -1,8 +1,18 @@
 <template>
 
   <div id="Car Dashboard.vue">
-    <div id="sidebar">
-    </div>
+    <!-- <div id="sidebar">
+     <v-avatar size='120' class='ma-12'>
+      <v-img
+      src='https://ik.imagekit.io/ugyodiq15/Mcdonalds-1023x675_rjGQLUAjR.jpg'
+      alt='user'
+      >
+      </v-img>
+     </v-avatar>
+      <v-sheet dark flat>
+      <h3 class='ma-12 heading 2'>Esther Howard</h3>
+      </v-sheet>
+    </div> -->
     <!-- <Header /> -->
     <div id='maindiv'>
     <v-container >
@@ -155,16 +165,16 @@
 </template>
 
 <script>
-/* import Header from '@/components/Navbar.vue'; */
-/* import Footer from '../components/Footer.vue'; */
+import Header from '@/components/Navbar.vue';
+import Footer from '../components/Footer.vue';
 /* import Drawer from '@/components/Drawer.vue'; */
 import Maps from '../components/Maps.vue';
 
 export default {
   name: 'Car Dashboard',
   components: {
-    /* Header, */
-    /* Footer, */
+    Header,
+    Footer,
     Maps,
     /*  Drawer, */
   },
