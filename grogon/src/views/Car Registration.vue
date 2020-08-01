@@ -27,11 +27,11 @@
             v-model='vehicleimage'
             filled>
             </v-file-input> -->
-            <v-text-field
+            <!-- <v-text-field
             label='vehicleimage'
             v-model='VehicleImage'
             filled>
-            </v-text-field>
+            </v-text-field> -->
             <v-text-field
             append-icon='mdi-eye'
             label='Password'
@@ -137,7 +137,7 @@ export default {
     menu: false,
     Name: '',
     Email: '',
-    VehicleImage: '',
+    /* VehicleImage: '', */
     Password: '',
     Phonenumber: '',
     PurchaseDate: '',
@@ -159,7 +159,7 @@ export default {
       this.$store.dispatch('driverRegistration', {
         Name: this.Name,
         Email: this.Email,
-        VehicleImage: this.VehicleImage,
+        /* VehicleImage: this.VehicleImage, */
         Password: this.Password,
         Phonenumber: this.Phonenumber,
         PurchaseDate: this.PurchaseDate,
