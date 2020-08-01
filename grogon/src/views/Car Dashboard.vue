@@ -1,6 +1,7 @@
 <template>
 
   <div id="Car Dashboard.vue">
+    <Header />
     <!-- <div id="sidebar">
      <v-avatar size='120' class='ma-12'>
       <v-img
@@ -28,7 +29,6 @@
       </v-text-field>
       </v-toolbar> -->
       <v-row>
-    <!-- <Drawer /> -->
     <v-col>
        <v-card max-width="600">
         <v-img max-height="600"
@@ -160,7 +160,7 @@
       </v-card>
     </v-container>
     </div>
-<!--       <Footer /> -->
+      <Footer />
   </div>
 </template>
 
@@ -181,7 +181,7 @@ export default {
 };
 </script>
 <style>
-#sidebar{
+/* #sidebar{
   height: 100%;
   width: 250px;
   position: fixed;
@@ -191,8 +191,8 @@ export default {
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;
-}
-#maindiv{
+} */
+/* #maindiv{
   margin-left: 200px;
-}
+} */
 </style>
