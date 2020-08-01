@@ -39,6 +39,26 @@
       <Maps />
     </v-container>
     <v-container>
+      <v-card>
+        <v-simple-table>
+          <thead>
+            <tr>
+            <th class='text-left'>Car Owner</th>
+            <th class='text-left'>Date</th>
+            <th class='text-left'>Rating</th>
+            <th class='text-left'>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </v-simple-table>
+      </v-card>
     </v-container>
    <Footer />
   </div>
