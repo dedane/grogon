@@ -1,10 +1,11 @@
 <template>
   <div id="Mech Dashboard">
+    <Header />
     <v-container>
       <v-row>
         <v-col>
           <v-card>
-            <v-card-title>
+            <v-card-title class='mb-10'>
               Cars Fixed
             </v-card-title>
             <v-card-subtitle>
@@ -14,7 +15,7 @@
         </v-col>
         <v-col>
           <v-card>
-            <v-card-title>
+            <v-card-title class='mb-10'>
               Average Transactions
             </v-card-title>
             <v-card-subtitle green>
@@ -34,25 +35,29 @@
         </v-col>
       </v-row>
     </v-container>
-    <Maps />
     <v-container>
-
+      <Maps />
     </v-container>
     <v-container>
     </v-container>
+   <Footer />
   </div>
 </template>
 
 <script>
+import Header from '@/components/Navbar.vue';
 import Maps from '@/components/Maps.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   name: 'Car Dashboard',
   components: {
+    Header,
     Maps,
+    Footer,
   },
-  data : () => ({
-    rating : 4,
+  data: () => ({
+    rating: 4,
   }),
 };
 </script>
