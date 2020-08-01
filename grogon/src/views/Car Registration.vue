@@ -104,7 +104,7 @@
             @click="submitForm()">
               Sign Up
             </v-btn>
-            </v-row>
+            <!-- </v-row>
             <v-row class='mt-8' align='center' justify='center'>
               or join us with
             </v-row>
@@ -122,7 +122,7 @@
               large fab>
                 <v-icon>mdi-facebook</v-icon>
               </v-btn>
-            </v-row>
+            </v-row> -->
           </v-form>
         </v-col>
       </v-row>
