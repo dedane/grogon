@@ -20,6 +20,12 @@
             v-model='Name'
             filled>
             </v-text-field>
+            <v-text-field
+            label='Email'
+            v-model='Email'
+            append-icon='mdi-email'
+            filled>
+            </v-text-field>
             <!-- <v-file-input
             accept='image/png, image/jpeg, image/bmp'
             append-icon='mdi-camera'
@@ -34,28 +40,22 @@
             </v-text-field> -->
             <v-text-field
             :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-            :type="show1 ? 'text': 'password'"
+            :type="show2 ? 'text': 'password'"
             @click:append="show2 = !show2"
             label='Password'
             v-model='Password'
             filled>
             </v-text-field>
-            <v-text-field
+            <!-- <v-text-field
             append-icon='mdi-phone'
             label='Phone number'
             v-model='Phonenumber'
             filled>
-            </v-text-field>
+            </v-text-field> -->
             <v-text-field
             append-icon='mdi-phone'
             label='Phone number'
             v-model='Phonenumber'
-            filled>
-            </v-text-field>
-            <v-text-field
-            label='Email'
-            v-model='Email'
-            append-icon='mdi-email'
             filled>
             </v-text-field>
             <v-row>
@@ -104,8 +104,8 @@
             @click="submitForm()">
               Sign Up
             </v-btn>
-            <!-- </v-row>
-            <v-row class='mt-8' align='center' justify='center'>
+            </v-row>
+            <!-- <v-row class='mt-8' align='center' justify='center'>
               or join us with
             </v-row>
             <v-row align='center'
@@ -175,7 +175,7 @@ export default {
         Carmake: this.Carmake,
       })
         .then(() => {
-          this.$router.push('/car login');
+          this.$router.push('/Carlogin');
         })
         .catch((error) => {
           // eslint-disable-next-line no-console

@@ -20,10 +20,11 @@
             filled>
             </v-text-field>
             <v-text-field
+            :append-icon="show2 ? 'mdi-eye' : 'mdi-eye-off'"
+            :type="show2 ? 'text': 'password'"
+            @click:append="show2 = !show2"
             label='Password'
             v-model='Password'
-            :rules='passwordRules'
-            append-icon='mdi-eye'
             filled>
             </v-text-field>
             <v-row align='center' justify='center'>
@@ -44,6 +45,7 @@ export default {
   name: 'Car Login',
   data: () => ({
     Email: '',
+    show2: false,
     emailRules: [
       (v) => !!v || 'E-mail must be valid',
       (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid',

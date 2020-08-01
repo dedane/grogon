@@ -78,8 +78,8 @@
             @click="submitForm()">
               Sign Up
             </v-btn>
-            <!-- </v-row>
-            <v-row class='mt-8' align='center' justify='center'>
+            </v-row>
+            <!-- <v-row class='mt-8' align='center' justify='center'>
               or join us with
             </v-row>
             <v-row align='center'

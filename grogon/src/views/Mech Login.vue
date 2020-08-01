@@ -20,10 +20,11 @@
             filled>
             </v-text-field>
             <v-text-field
+            :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+            :type="show1 ? 'text': 'password'"
+            @click:append="show1 = !show1"
             label='Password'
             v-model='Password'
-            :rules="passwordRules"
-            append-icon='mdi-eye'
             filled>
             </v-text-field>
             <v-row align='center' justify='center'>
@@ -44,6 +45,7 @@ export default {
   name: 'Mech Login',
   data: () => ({
     Email: '',
+    show1: false,
     emailRules: [
       (v) => !!v || 'E-mail must be valid',
       (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid',
