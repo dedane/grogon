@@ -79,6 +79,15 @@
               Sign Up
             </v-btn>
             </v-row>
+            <v-row class='justify-center align-center'>
+            <h3>or</h3>
+            </v-row>
+            <v-row class='justify-center align-center'>
+               <span>Already have an account?</span>
+                  <v-btn text to="/mechlogin" xlarge color="success" class="mb-4 mt-3">
+                      Sign In
+                  </v-btn>
+            </v-row>
             <!-- <v-row class='mt-8' align='center' justify='center'>
               or join us with
             </v-row>

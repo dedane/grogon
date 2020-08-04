@@ -105,6 +105,12 @@
               Sign Up
             </v-btn>
             </v-row>
+            <v-row class='align-center justify-center'>
+              <span>Already have an account?</span>
+                  <v-btn text to="/carlogin" xlarge color="success" class="mb-4 mt-3">
+                      Sign In
+                  </v-btn>
+            </v-row>
             <!-- <v-row class='mt-8' align='center' justify='center'>
               or join us with
             </v-row>
