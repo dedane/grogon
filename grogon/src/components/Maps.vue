@@ -9,14 +9,17 @@
       <MglMap
         :accessToken="accessToken"
         :mapStyle="mapStyle"
-        :center="[ -1.2841,36.8155 ]"
+        center=[  -1.2833,36.8167 ]
         :zoom="zoom"
+        :attributionControl="false"
       >
+      <MglAttributionControl />
+      <MglGeolocateControl position="top-right"/>
       <MglMarker
-        :coordinates="fetchData(coordinated)"
+        coordinates=[ -1.2833,36.8167 ]
         :color='blue'>
       <MglPopup
-        :coordinates='fetchData(coordinated)'>
+        coordinates=[ -1.2833,36.8167 ]>
           <v-card v-model='mechs'
            v-for='mech in mechs'
            :key='mech.img'
@@ -68,8 +71,14 @@ export default {
   data: () => ({
     accessToken: 'pk.eyJ1IjoiZXZhbnM2NjYiLCJhIjoiY2p2bTVwOGhsMHl4bjQwb2ZlbmRyYnpwYSJ9._f5MrY1PqtLY06Wfv3nQ6g',
     mapStyle: 'mapbox://styles/mapbox/streets-v11',
-    Latitude: '',
-    Longitude: '',
+    myCoordinates: {
+      Lat: 0,
+      Lon: 0,
+    },
+    mapCoodinates: {
+      lat: 0,
+      lon: 0,
+    },
     showUserLocation: true,
     zoom: 3,
     map: [],
@@ -85,14 +94,14 @@ export default {
   }),
   // computed property
   computed: {
-    /* coordinates() { */
-    // Map function assist in mapping coordinates to their exact member array
-    /* const res = this.coordinated.map(({ longitude, latitude }) => [
+    /* coordinates() {
+      //  Map function assist in mapping coordinates to their exact member array
+      const res = this.coordinated.map(({ longitude, latitude }) => [
         longitude,
         latitude,
       ]);
-      return res; */
-    /* }, */
+      return res;
+    }, */
   },
   /* mounted() {
     const Mapboxgl = require('mapbox-gl');
@@ -113,17 +122,17 @@ export default {
   // Although they do not function when server is rendering
   // Used mostly with promises
   async mounted() {
-    await navigator.geolocation.getCurrentPosition(
+    /* await navigator.geolocation.getCurrentPosition(
       ({ coords }) => {
         this.longitude = coords.longitutde;
         this.latitude = coords.latitude;
         const data = this.fetchData(coords);
         this.coordinated = data;
       },
-    );
+    ); */
   },
   methods: {
-    async fetchData([latitude, longitude]) {
+    /*  async fetchData([latitude, longitude]) {
       const data = await this.coordinated.push([
         latitude,
         longitude,
@@ -132,7 +141,9 @@ export default {
     },
     getCoordinate({ longitude, latitude }) {
       return [longitude, latitude];
-    },
+    }, */
+  },
+  updated: {
   },
   // This lifecycle hook calls the mapbox map even before the component is initialised
 };

@@ -11,6 +11,10 @@
         </v-col>
         <v-col>
           <v-row > Welcome Back </v-row>
+
+          <v-card flat class="transparent red--text error-messages mb-4" width="500">
+            <span v-for="(error, i) in errors" :key="i">{{ error.messge }}</span>
+          </v-card>
           <v-form @submit.prevent="login">
             <v-text-field
             label='Email'
@@ -51,6 +55,7 @@ export default {
       (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid',
     ],
     Password: '',
+    errors: [],
     passwordRules: [
       (v) => !!v || 'Password is required',
       (v) => (v && v.length >= 8) || 'Password must be more than 7 characters',
@@ -64,6 +69,7 @@ export default {
       })
         .then(() => {
           this.$router.push('/CarDash');
+          this.errors = [];
         })
         .catch((err) => {
           console.log(err);
