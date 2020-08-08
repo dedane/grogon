@@ -8,6 +8,7 @@ import shop from '../views/Shop.vue';
 import MechDash from '../views/Mech Dashboard.vue';
 import MechLogin from '../views/Mech Login.vue';
 import MechRegistration from '../views/Mech Registration.vue';
+/* import store from '../store'; */
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,7 @@ const routes = [
     path: '/CarDash',
     name: 'CarDash',
     component: CarDash,
+    meta: { requiresAuth: true },
   },
   {
     path: '/Carlogin',
@@ -41,6 +43,7 @@ const routes = [
     path: '/MechDash',
     name: 'MechDash',
     component: MechDash,
+    meta: { requiresAuth: true },
   },
   {
     path: '/MechLogin',
@@ -59,5 +62,17 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 });
+
+/* router.beforeEach((to, from, next) => {
+  if (to.meta.requiresAuth) {
+    if (!store.mech) {
+      next({
+        name: 'MechLogin',
+      });
+    } else {
+      next();
+    }
+  }
+}); */
 
 export default router;

@@ -9,17 +9,17 @@
       <MglMap
         :accessToken="accessToken"
         :mapStyle="mapStyle"
-        center=[  -1.2833,36.8167 ]
+        :center=coordinates
         :zoom="zoom"
         :attributionControl="false"
       >
       <MglAttributionControl />
       <MglGeolocateControl position="top-right"/>
       <MglMarker
-        coordinates=[ -1.2833,36.8167 ]
+        :coordinates=coordinates
         :color='blue'>
       <MglPopup
-        coordinates=[ -1.2833,36.8167 ]>
+        :coordinates=coordinates>
           <v-card v-model='mechs'
            v-for='mech in mechs'
            :key='mech.img'
@@ -82,6 +82,7 @@ export default {
     showUserLocation: true,
     zoom: 3,
     map: [],
+    coordinates: [-1.2833, 36.8167],
     coordinated: [],
     mechs: [
       {
