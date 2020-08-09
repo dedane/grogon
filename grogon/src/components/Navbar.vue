@@ -4,6 +4,10 @@
     <v-img src='https://ik.imagekit.io/ugyodiq15/grogon-removebg-preview_2_yObMp_R1_.svg' max-width='160' max-height='160'></v-img>
   </v-btn>
   <v-spacer></v-spacer>
+  <div v-if="currentUser.name">
+    {{ currentUser.name }}
+    <v-btn text class='mr-2' @click='logoutUser'>Logout</v-btn>
+  </div>
   <v-col justify-end >
     <v-btn class='text-center mx-2 black--text'
     @click="$router.push('/Shop')"
