@@ -9,17 +9,17 @@
       <MglMap
         :accessToken="accessToken"
         :mapStyle="mapStyle"
-        :center=coordinates
+        :center="coordinates"
         :zoom="zoom"
         :attributionControl="false"
       >
       <MglAttributionControl />
       <MglGeolocateControl position="top-right"/>
       <MglMarker
-        :coordinates=coordinates
+        :coordinates="coordinates"
         :color='blue'>
       <MglPopup
-        :coordinates=coordinates>
+        :coordinates="coordinates">
           <v-card v-model='mechs'
            v-for='mech in mechs'
            :key='mech.img'
@@ -70,7 +70,7 @@ export default {
   },
   data: () => ({
     accessToken: 'pk.eyJ1IjoiZXZhbnM2NjYiLCJhIjoiY2p2bTVwOGhsMHl4bjQwb2ZlbmRyYnpwYSJ9._f5MrY1PqtLY06Wfv3nQ6g',
-    mapStyle: 'mapbox://styles/mapbox/streets-v11',
+    mapStyle: 'mapbox://styles/evans666/ckdnl24ny45n71imwhop8allo',
     myCoordinates: {
       Lat: 0,
       Lon: 0,
@@ -80,9 +80,9 @@ export default {
       lon: 0,
     },
     showUserLocation: true,
-    zoom: 3,
+    zoom: 15,
     map: [],
-    coordinates: [-1.2833, 36.8167],
+    coordinates: [36.9390643853648526, -1.156947303772],
     coordinated: [],
     mechs: [
       {
