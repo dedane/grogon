@@ -10,12 +10,14 @@
     text>
     Shop
     </v-btn>
-    <v-btn class='text-center mx-2 black--text'
+    <v-btn v-if='isloggedIn'
+    class='text-center mx-2 black--text'
     @click="$router.push('/MechDash')"
     text>
     Mechanic
     </v-btn>
-    <v-btn class='text-center mx-2 black--text'
+    <v-btn v-if='isloggedIn'
+    class='text-center mx-2 black--text'
     @click="$router.push('/CarDash')"
     text>
     Carowner
@@ -50,7 +52,17 @@
       </v-card-actions>
     </v-card>
   </v-dialog> -->
-  <v-btn color='black' dark>
+  <v-btn v-if='!isLoggedIn'
+  class='mx-2'
+  color='green' dark v-on:click="logout">
+    Login
+  </v-btn>
+  <v-btn v-if='!isLoggedIn'
+  class='mx-2'
+  color='red' dark v-on:click="logout">
+    Register
+  </v-btn>
+  <v-btn v-if='isLoggedIn' color='black' dark v-on:click="logout">
     Logout
   </v-btn>
   </v-toolbar>
@@ -66,7 +78,7 @@ export default {
   methods: {
     logout() {
       this.$store.actions.logout().then(() => {
-        this.$router.push('/login');
+        this.$router.push('/');
       });
     },
   },
