@@ -30,7 +30,7 @@
             <v-row align='center' justify='center'>
             <v-btn dark width='400' color='#046e0c'
             @click="login()">
-              Sign Up
+              Sign In
             </v-btn>
             </v-row>
           </v-form>

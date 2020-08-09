@@ -10,9 +10,9 @@
   </div>
   <v-col justify-end >
     <v-btn class='text-center mx-2 black--text'
-    @click="$router.push('/Shop')"
+    @click="$router.push('/')"
     text>
-    Shop
+    Home
     </v-btn>
     <v-btn v-if='isloggedIn'
     class='text-center mx-2 black--text'
@@ -56,19 +56,21 @@
       </v-card-actions>
     </v-card>
   </v-dialog> -->
-  <v-btn v-if='currentUser == !isLoggedIn'
-  class='mx-2'
-  color='green' dark v-on:click="logout">
-    Login
-  </v-btn>
-  <v-btn v-if='currentUser == !isLoggedIn'
-  class='mx-2'
-  color='red' dark v-on:click="logout">
-    Register
-  </v-btn>
-  <v-btn v-else-if='currentUser == isLoggedIn'
+  <v-btn v-if='isLoggedIn'
   color='black' dark v-on:click="logout">
     Logout
+  </v-btn>
+  <v-btn v-if='!isLoggedIn'
+  class='mx-2'
+  color='green' dark
+  @click="$router.push('/Carlogin')">
+    Login
+  </v-btn>
+  <v-btn v-if='!isLoggedIn'
+  class='mx-2'
+  color='red' dark
+  @click="$router.push('/Carregistration')">
+    Register
   </v-btn>
   </v-toolbar>
 </template>
