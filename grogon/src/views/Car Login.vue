@@ -10,11 +10,10 @@
         </v-img>
         </v-col>
         <v-col>
-          <v-row > Welcome Back </v-row>
-
           <v-card flat class="transparent red--text error-messages mb-4" width="500">
             <span v-for="(error, i) in errors" :key="i">{{ error.messge }}</span>
           </v-card>
+          <v-row > Welcome Back </v-row>
           <v-form @submit.prevent="login">
             <v-text-field
             label='Email'

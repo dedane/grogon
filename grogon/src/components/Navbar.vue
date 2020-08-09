@@ -22,7 +22,7 @@
     </v-btn>
   </v-col>
   <v-spacer/>
-  <v-avatar @click="dialog = true">
+  <!-- <v-avatar @click="dialog = true">
     <v-img
       src='https://ik.imagekit.io/ugyodiq15/Mcdonalds-1023x675_rjGQLUAjR.jpg'
       alt='user'
@@ -49,7 +49,10 @@
         <v-btn color='success' @click="dialog = false">Awesome</v-btn>
       </v-card-actions>
     </v-card>
-  </v-dialog>
+  </v-dialog> -->
+  <v-btn color='black' dark>
+    Logout
+  </v-btn>
   </v-toolbar>
 </template>
 
@@ -57,7 +60,16 @@
 export default {
   data: () => ({
     dialog: false,
+    isLoggedIn: false,
+    currentUser: false,
   }),
+  methods: {
+    logout() {
+      this.$store.actions.logout().then(() => {
+        this.$router.push('/login');
+      });
+    },
+  },
 };
 </script>
 
