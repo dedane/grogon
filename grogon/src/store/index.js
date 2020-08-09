@@ -133,11 +133,11 @@ export default new Vuex.Store({
     },
     Logout({ commit }) {
       return new Promise((resolve) => {
-        commit('LOGOUT');
-        Location.reload();
+        commit('logout');
+        /* Location.reload();
         Vue.$cookies.remove('_token');
         Vue.$cookies.remove('mech');
-        Vue.$cookies.remove('driver');
+        Vue.$cookies.remove('driver'); */
 
         delete axios.defaults.headers.common.Authorization;
         resolve();
