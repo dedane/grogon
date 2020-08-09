@@ -4,6 +4,8 @@ import DriverRoute from './modules/Driver/Driver';
 import MechanicRoute from './modules/mechanic/Mechanic';
 import Home from '../views/Home.vue';
 import store from '../store/index';
+import Mechanic from '../views/Mechanic.vue';
+import Driver from '../views/Driver.vue';
 
 Vue.use(VueRouter);
 
