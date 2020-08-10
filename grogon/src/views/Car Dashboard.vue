@@ -237,9 +237,19 @@ export default {
   data() {
     return {
       edit: false,
-
+      Batterypower: '',
+      Engineoil: '',
+      Fuel: '',
+      Milleage: '',
+      Nextservice: '',
+      Wheelhealth: '',
     };
   },
+  methods: {
+    updateDriver(){
+      
+    }
+  }
 };
 </script>
 <style>

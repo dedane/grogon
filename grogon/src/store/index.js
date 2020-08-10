@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios';
 import VueCookies from 'vue-cookies';
+import { reject } from 'core-js/fn/promise';
 
 Vue.use(Vuex);
 
@@ -34,6 +35,10 @@ export default new Vuex.Store({
     logout(state) {
       state.status = '';
       state.token = '';
+    },
+    updateDriver(state, token) {
+      state.status = 'success';
+      state.token = token;
     },
   },
   getters: {
@@ -144,4 +149,9 @@ export default new Vuex.Store({
       });
     },
   },
+  EditDriver({ commit }, driver) {
+    return new Promise((resolve,reject) => {
+
+    })
+  }
 });
