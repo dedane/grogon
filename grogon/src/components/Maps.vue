@@ -11,7 +11,7 @@
         :mapStyle="mapStyle"
         :center="coordinates"
         :zoom="zoom"
-        :attributionControl="false"
+        @map-load="addMarkers"
       >
       <MglAttributionControl />
       <MglGeolocateControl position="top-right"/>
@@ -55,6 +55,7 @@
 </template>
 <script>
 import Mapbox from 'mapbox-gl';
+
 import {
   MglMap,
   MglPopup,
@@ -70,7 +71,7 @@ export default {
   },
   data: () => ({
     accessToken: 'pk.eyJ1IjoiZXZhbnM2NjYiLCJhIjoiY2p2bTVwOGhsMHl4bjQwb2ZlbmRyYnpwYSJ9._f5MrY1PqtLY06Wfv3nQ6g',
-    mapStyle: 'mapbox://styles/evans666/ckdnl24ny45n71imwhop8allo',
+    mapStyle: 'mapbox://styles/evans666/ckdnkxg7y16gf1iqj0zh8g9mu',
     myCoordinates: {
       Lat: 0,
       Lon: 0,
@@ -143,6 +144,185 @@ export default {
     getCoordinate({ longitude, latitude }) {
       return [longitude, latitude];
     }, */
+    addMarkers(map) {
+      // eslint-disable-next-line global-require
+      /* const mapboxgl; */
+      const geojson = {
+        type: 'FeatureCollection',
+        features: [
+          {
+            type: 'Feature',
+            properties: {
+              'marker-color': '#7e7e7e',
+              'marker-size': 'medium',
+              'marker-symbol': 'circle-stroked',
+              Name: 'John Autocare',
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [
+                36.9430947303772,
+                -1.1590643853648526,
+              ],
+            },
+          },
+          {
+            type: 'Feature',
+            properties: {
+              'marker-color': '#7e7e7e',
+              'marker-size': 'medium',
+              'marker-symbol': 'circle-stroked',
+              Name: 'Shwari Autocare',
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [
+                36.936163902282715,
+                -1.1609308202558843,
+              ],
+            },
+          },
+          {
+            type: 'Feature',
+            properties: {
+              'marker-color': '#7e7e7e',
+              'marker-size': 'medium',
+              'marker-symbol': 'circle-stroked',
+              Name: 'Get it Right Autoshop',
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [
+                36.936635971069336,
+                -1.1611453529230646,
+              ],
+            },
+          },
+          {
+            type: 'Feature',
+            properties: {
+              'marker-color': '#7e7e7e',
+              'marker-size': 'medium',
+              'marker-symbol': 'circle-stroked',
+              Name: 'Isaax Autoshop',
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [
+                36.93378210067748,
+                -1.1593432780129989,
+              ],
+            },
+          },
+          {
+            type: 'Feature',
+            properties: {
+              'marker-color': '#7e7e7e',
+              'marker-size': 'medium',
+              'marker-symbol': 'circle-stroked',
+              Name: 'EasyFix Autocare',
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [
+                36.9364857673645,
+                -1.157262309130391,
+              ],
+            },
+          },
+          {
+            type: 'Feature',
+            properties: {
+              'marker-color': '#7e7e7e',
+              'marker-size': 'medium',
+              'marker-symbol': 'circle-stroked',
+              Name: 'Fahari Car care',
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [
+                36.93326711654663,
+                -1.1520277002481618,
+              ],
+            },
+          },
+          {
+            type: 'Feature',
+            properties: {
+              'marker-color': '#7e7e7e',
+              'marker-size': 'medium',
+              'marker-symbol': 'circle-stroked',
+              Name: 'Gears And Hamer auto',
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [
+                36.92779541015625,
+                -1.1562325507679554,
+              ],
+            },
+          },
+          {
+            type: 'Feature',
+            properties: {
+              'marker-color': '#7e7e7e',
+              'marker-size': 'medium',
+              'marker-symbol': 'circle-stroked',
+              Name: 'NeverStop auto',
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [
+                36.92358970642089,
+                -1.1546879125240137,
+              ],
+            },
+          },
+          {
+            type: 'Feature',
+            properties: {
+              'marker-color': '#7e7e7e',
+              'marker-size': 'medium',
+              'marker-symbol': 'circle-stroked',
+              Name: 'East Mechanics',
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [
+                36.919426918029785,
+                -1.1532290867451627,
+              ],
+            },
+          },
+          {
+            type: 'Feature',
+            properties: {
+              'marker-color': '#7e7e7e',
+              'marker-size': 'medium',
+              'marker-symbol': 'circle-stroked',
+              Name: 'Nostra Autocare',
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [
+                36.95054054260253,
+                -1.16155296494586,
+              ],
+            },
+          },
+        ],
+      };
+      geojson.features.forEach((marker) => {
+        // create a HTML element for each feature
+        const el = document.createElement('div');
+        el.className = 'Map__marker';
+
+        // make a marker for each feature and add to the map
+        new Mapbox.Marker(el)
+          .setLngLat(marker.geometry.coordinates)
+          .addTo(map);
+      });
+    },
   },
   updated: {
   },
