@@ -71,7 +71,7 @@
 
 <script>
 import Header from '@/components/Navbar.vue';
-import Maps from '@/components/Maps.vue';
+import Maps from '@/components/MechanicMap.vue';
 import Footer from '@/components/Footer.vue';
 
 export default {

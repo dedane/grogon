@@ -55,7 +55,6 @@
 </template>
 <script>
 import Mapbox from 'mapbox-gl';
-
 import {
   MglMap,
   MglPopup,
