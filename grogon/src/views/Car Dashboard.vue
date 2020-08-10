@@ -16,7 +16,63 @@
     </div> -->
     <!-- <Header /> -->
     <div id='maindiv'>
+      <v-spacer></v-spacer>
     <v-container >
+      <v-dialog v-model='edit'>
+        <template v-slot:activator="{ on, attrs}">
+      <v-btn class='ma-2'
+      v-on='on'
+      v-bind='attrs'
+      absolute
+      right
+      color='green'
+      tile outlined>
+          Edit
+          <v-icon class='mx-auto'>mdi-pencil</v-icon>
+        </v-btn>
+        </template>
+        <v-card>
+        <v-form
+        v-if='edit'
+        height='200'>
+          <v-text-field class='ma-6'
+          v-model='Nextservice'
+          prepend-icon='mdi-shield-check'
+          label='Nextservice'>
+          </v-text-field>
+          <v-text-field class='ma-6'
+          v-model='Milleage'
+          prepend-icon='mdi-road-variant'
+          label='Milleage Covered'>
+          </v-text-field>
+          <v-text-field class='ma-6'
+          prepend-icon='mdi-fuel'
+          v-model='Fuel'
+          label='fuel'>
+          </v-text-field>
+          <v-text-field class='ma-6'
+          prepend-icon='mdi-car-battery'
+          label='Battery Power'
+          v-model='Batterypower'>
+          </v-text-field>
+          <v-text-field class='ma-6'
+          prepend-icon='mdi-gas-station'
+          v-model='Engineoil'
+          label='Fuel Capacity'>
+          </v-text-field>
+          <v-text-field class='ma-6'
+          prepend-icon='mdi-car-tire-alert'
+          v-model='Wheelhealth'
+          label='Wheel Health'>
+          </v-text-field>
+          <v-btn class='ma-8'
+          dark width='400' color='#046e0c'
+            @click="submitForm()">
+              Edit
+            </v-btn>
+        </v-form>
+        </v-card>
+        </v-dialog>
       <!-- <v-toolbar
       dense
       class='ml-10'
@@ -81,7 +137,7 @@
         </v-col>
         </v-card >
         <v-card class=" align-end" max-width="600">
-          <v-col class='ma-6'>
+          <v-col class='ma-4'>
             <v-icon size="100">
               mdi-fuel
             </v-icon>
@@ -92,7 +148,7 @@
               30%
             </v-text>
           </v-coL>
-          <v-col class='ma-6'>
+          <v-col class='ma-4'>
             <v-icon size="100">
               mdi-car-battery
             </v-icon>
@@ -105,7 +161,7 @@
           </v-col>
         </v-card>
         <v-card>
-          <v-col class='ma-6'>
+          <v-col class='mt-4'>
             <v-icon size="100">
               mdi-gas-station
             </v-icon>
@@ -116,7 +172,7 @@
               3.6L
             </v-text>
           </v-coL>
-          <v-col class='ma-6'>
+          <v-col >
             <v-icon size="100">
               mdi-car-tire-alert
             </v-icon>
@@ -177,6 +233,12 @@ export default {
     Footer,
     Maps,
     /*  Drawer, */
+  },
+  data() {
+    return {
+      edit: false,
+
+    };
   },
 };
 </script>

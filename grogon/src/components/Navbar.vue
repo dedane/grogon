@@ -56,17 +56,17 @@
       </v-card-actions>
     </v-card>
   </v-dialog> -->
-  <v-btn v-if='isLoggedIn'
+  <v-btn v-if='!isLoggedIn'
   color='black' dark v-on:click="logout">
     Logout
   </v-btn>
-  <v-btn v-if='!isLoggedIn'
+  <v-btn v-if='isLoggedIn'
   class='mx-2'
   color='green' dark
   @click="$router.push('/Carlogin')">
     Login
   </v-btn>
-  <v-btn v-if='!isLoggedIn'
+  <v-btn v-if='isLoggedIn'
   class='mx-2'
   color='red' dark
   @click="$router.push('/Carregistration')">
