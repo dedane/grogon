@@ -150,8 +150,23 @@ export default new Vuex.Store({
     },
   },
   EditDriver({ commit }, driver) {
-    return new Promise((resolve,reject) => {
+    return new Promise((resolve, reject) => {
+      commit('auth_request');
+      axios.patch('https://grogon-back.herokuapp.com/driver/register/:Id', driver)
+        .then((resp) => {
+          const { token } = resp.data;
+          /*  const { user } = resp.data; */
+          localStorage.setItem('token', token);
 
-    })
-  }
+          axios.defaults.headers.common.Authorization = token;
+          commit('auth_success', token, driver);
+          resolve(resp);
+        })
+        .catch((err) => {
+          commit('auth_error');
+          localStorage.removeItem('token');
+          reject(err);
+        });
+    });
+  },
 });
