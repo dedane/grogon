@@ -35,9 +35,17 @@ export default new Vuex.Store({
       state.status = '';
       state.token = '';
     },
-    updateDriver(state, token) {
-      state.status = 'success';
-      state.token = token;
+    updateDriver(state, payload) {
+      state.driver = state.driver.map((d) => {
+        if (d.id === payload.id) {
+          /* eslint no-param-reassign: "error" */
+          const Payload = {
+            ...payload, driver: state.driver.filter((x) => x.id === payload.driver)[0],
+          };
+          return Payload;
+        }
+        return d;
+      });
     },
   },
   getters: {
