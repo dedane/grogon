@@ -246,10 +246,22 @@ export default {
     };
   },
   methods: {
-    updateDriver(){
-      
-    }
-  }
+    updateDriver() {
+      this.$store.dispatch('EditDriver', {
+        Batterypower: this.Batterypower,
+        Engineoil: this.Engineoil,
+        Fuel: this.Fuel,
+        Milleage: this.Milleage,
+        Nextservice: this.Nextservice,
+        Wheelhealth: this.Wheelhealth,
+      })
+        .then(() => {
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
 };
 </script>
 <style>

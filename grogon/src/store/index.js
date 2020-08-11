@@ -2,7 +2,6 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios';
 import VueCookies from 'vue-cookies';
-import { reject } from 'core-js/fn/promise';
 
 Vue.use(Vuex);
 
@@ -151,16 +150,10 @@ export default new Vuex.Store({
   },
   EditDriver({ commit }, driver) {
     return new Promise((resolve, reject) => {
-      commit('auth_request');
+      commit('updateDriver');
       axios.patch('https://grogon-back.herokuapp.com/driver/register/:Id', driver)
         .then((resp) => {
-          const { token } = resp.data;
-          /*  const { user } = resp.data; */
-          localStorage.setItem('token', token);
-
-          axios.defaults.headers.common.Authorization = token;
-          commit('auth_success', token, driver);
-          resolve(resp);
+          commit('updateDriver', resp.data);
         })
         .catch((err) => {
           commit('auth_error');
