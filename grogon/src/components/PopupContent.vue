@@ -1,39 +1,28 @@
 <template>
-  <div>
-    <h3>{{ feature.properties.title }}</h3>
-    <v-card v-model='mechs'
-           v-for='mech in mechs'
-           :key='mech.img'
-           class="mx-auto">
-          <v-list-item-avatar
-             tile
-             size='80'>
-             <v-img :src='mech.img'>
-             </v-img>
-          </v-list-item-avatar>
-          <v-list-item-content>
-              <div class='overline mb-4'>Mechanic</div>
-              <v-list-item-title class="headline mb-1"
-              v-text='feature.properties.title'></v-list-item-title>
-              <v-list-item-icon>
-                <v-icon v-text='feature.properties.icon'></v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title v-text='mech.info'></v-list-item-title>
-              </v-list-item-content>
-          </v-list-item-content>
-            <v-card-actions>
-              <v-btn rounded large color='green' dark>Request</v-btn>
-              <v-btn rounded large outlined='green' >Call</v-btn>
-            </v-card-actions>
-           </v-card>
-  </div>
+  <v-card height='mx-auto'>
+    <h1 class='mt-2 mb-2'>{{ feature.properties.title }}</h1>
+    <v-img :src= 'feature.properties.img'></v-img>
+    <h4 class='mt-4'>Phone Number: {{ feature.properties.Phonenumber }}</h4>
+    <v-divider></v-divider>
+    <h5> Current Ratings </h5>
+    <v-card-actions>
+    <v-rating
+    v-model='rating'
+    full-icon='mdi-star'
+    empty-icon='mdi-star'
+    ></v-rating>
+    </v-card-actions>
+    <button @click="popupClicked">Book Mechanic</button>
+  </v-card>
 </template>
 
 <script>
 import Vue from 'vue';
 
 export default Vue.extend({
+  data: () => ({
+    rating: 0,
+  }),
   props: {
     feature: {
       required: true,
@@ -42,7 +31,7 @@ export default Vue.extend({
   },
   methods: {
     popupClicked() {
-      alert('Learn more clicked');
+      alert('Mechanics number is');
     },
   },
 });

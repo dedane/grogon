@@ -90,6 +90,8 @@ export default {
               'marker-size': 'medium',
               'marker-symbol': 'circle-stroked',
               title: 'John Autocare',
+              img: 'https://ik.imagekit.io/ugyodiq15/African-woman-working-on-car-ONE-TIME-USE-ONLY-FOR-WP1658_4mtTNGEx5.jpg',
+              Phonenumber: '+254701137925',
               icon: 'car-repair',
             },
             geometry: {
@@ -107,6 +109,8 @@ export default {
               'marker-size': 'medium',
               'marker-symbol': 'circle-stroked',
               title: 'Shwari Autocare',
+              img: 'https://ik.imagekit.io/ugyodiq15/slider-2-1024x480_MVkE1K2dB.png',
+              Phonenumber: '+254701137925',
               icon: 'car-repair',
             },
             geometry: {
@@ -124,6 +128,8 @@ export default {
               'marker-size': 'medium',
               'marker-symbol': 'circle-stroked',
               title: 'Get it Right Autoshop',
+              img: 'https://ik.imagekit.io/ugyodiq15/Friendship-culminates-in-thriving-car-workshop-BUSINESS-PARTNERS-696x435_zgC5Am81x.jpg',
+              Phonenumber: '+254701137925',
               icon: 'car-repair',
             },
             geometry: {
@@ -141,6 +147,8 @@ export default {
               'marker-size': 'medium',
               'marker-symbol': 'circle-stroked',
               title: 'Isaax Autoshop',
+              img: 'https://ik.imagekit.io/ugyodiq15/61-Basic-Auto-Mechanic-Skills-To-Fix-Your-Car-Yourself-ss_iegteddlH.jpg',
+              Phonenumber: '+254701137925',
               icon: 'car-repair',
             },
             geometry: {
@@ -158,6 +166,8 @@ export default {
               'marker-size': 'medium',
               'marker-symbol': 'circle-stroked',
               title: 'EasyFix Autocare',
+              img: 'https://ik.imagekit.io/ugyodiq15/African-woman-working-on-car-ONE-TIME-USE-ONLY-FOR-WP1658_4mtTNGEx5.jpg',
+              Phonenumber: '+254701137925',
               icon: 'car-repair',
             },
             geometry: {
@@ -175,6 +185,8 @@ export default {
               'marker-size': 'medium',
               'marker-symbol': 'circle-stroked',
               title: 'Fahari Car care',
+              img: 'https://ik.imagekit.io/ugyodiq15/download_swcp-EkcC.jpeg',
+              Phonenumber: '+254701137925',
               icon: 'car-repair',
             },
             geometry: {
@@ -192,6 +204,8 @@ export default {
               'marker-size': 'medium',
               'marker-symbol': 'circle-stroked',
               title: 'Gears And Hamer auto',
+              img: 'https://ik.imagekit.io/ugyodiq15/slider-2-1024x480_MVkE1K2dB.png',
+              Phonenumber: '+254701137925',
               icon: 'car-repair',
             },
             geometry: {
@@ -209,6 +223,8 @@ export default {
               'marker-size': 'medium',
               'marker-symbol': 'circle-stroked',
               title: 'NeverStop auto',
+              img: 'https://ik.imagekit.io/ugyodiq15/images_SWe-SRYw8.jpeg',
+              Phonenumber: '+254701137925',
               icon: 'car-repair',
             },
             geometry: {
@@ -226,6 +242,8 @@ export default {
               'marker-size': 'medium',
               'marker-symbol': 'circle-stroked',
               title: 'East Mechanics',
+              img: 'https://ik.imagekit.io/ugyodiq15/61-Basic-Auto-Mechanic-Skills-To-Fix-Your-Car-Yourself-ss_iegteddlH.jpg',
+              Phonenumber: '+254701137925',
               icon: 'car-repair',
             },
             geometry: {
@@ -243,6 +261,9 @@ export default {
               'marker-size': 'medium',
               'marker-symbol': 'circle-stroked',
               title: 'Nostra Autocare',
+              img: 'https://ik.imagekit.io/ugyodiq15/Friendship-culminates-in-thriving-car-workshop-BUSINESS-PARTNERS-696x435_zgC5Am81x.jpg',
+              Phonenumber: '+254701137925',
+              rating: 0,
               icon: 'car-repair',
             },
             geometry: {
