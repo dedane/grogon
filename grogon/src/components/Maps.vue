@@ -14,12 +14,17 @@
         @map-load="addMarkers"
       >
       <MglAttributionControl />
-      <MglGeolocateControl position="top-right"/>
+      <MglNavigationControl position="top-right" />
+      <MglGeolocateControl position="top-right" />
+      <MglNavigationControl position="top-right" />
+      <MglGeolocateControl position="top-right" />
+      <MglScaleControl />
       <MglMarker
         :coordinates="coordinates"
         :color='blue'>
       <MglPopup
-        :coordinates="coordinates">
+      @map-load="addMarkers"
+        :coordinates="addMarkers">
           <v-card v-model='mechs'
            v-for='mech in mechs'
            :key='mech.img'
@@ -55,6 +60,7 @@
 </template>
 <script>
 import Mapbox from 'mapbox-gl';
+
 import {
   MglMap,
   MglPopup,

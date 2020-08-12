@@ -33,6 +33,7 @@
         </template>
         <v-card>
         <v-form
+        @submit.prevent="updateDriver"
         v-if='edit'
         height='200'>
           <v-text-field class='ma-6'
@@ -67,7 +68,7 @@
           </v-text-field>
           <v-btn class='ma-8'
           dark width='400' color='#046e0c'
-            @click="submitForm()">
+            @click="updateDriver()">
               Edit
             </v-btn>
         </v-form>
@@ -204,7 +205,8 @@
           <v-btn
           dark
           color='#000000'
-          large>
+          large
+          @click='maps'>
           <v-icon left>mdi-calendar</v-icon>
           Book Mechanic</v-btn>
         </v-col>
