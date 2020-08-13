@@ -14,13 +14,13 @@
     text>
     Home
     </v-btn>
-    <v-btn v-if='isloggedIn'
+    <v-btn v-if='!isloggedIn'
     class='text-center mx-2 black--text'
     @click="$router.push('/MechDash')"
     text>
     Mechanic
     </v-btn>
-    <v-btn v-if='isloggedIn'
+    <v-btn v-if='!isloggedIn'
     class='text-center mx-2 black--text'
     @click="$router.push('/CarDash')"
     text>
