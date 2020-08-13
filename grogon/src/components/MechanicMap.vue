@@ -274,6 +274,206 @@ export default {
               ],
             },
           },
+          {
+      type: 'Feature',
+      properties: {
+        'marker-color': '#3ecc5a',
+        'marker-size': 'medium',
+        'marker-symbol': 'circle',
+        title: 'Joe Mechanic',
+        img: 'https://ik.imagekit.io/ugyodiq15/Friendship-culminates-in-thriving-car-workshop-BUSINESS-PARTNERS-696x435_zgC5Am81x.jpg',
+        Phonenumber: '+254701137925',
+        rating: 0,
+        icon: 'car-repair',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [
+          36.81861877441406,
+          -1.2745664202152647,
+        ],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {
+        'marker-color': '#7e7e7e',
+        'marker-size': 'medium',
+        'marker-symbol': 'circle-stroked',
+        title: 'Craft Mechanic',
+        img: 'https://ik.imagekit.io/ugyodiq15/Friendship-culminates-in-thriving-car-workshop-BUSINESS-PARTNERS-696x435_zgC5Am81x.jpg',
+        Phonenumber: '+254701137925',
+        rating: 0,
+        icon: 'car-repair',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [
+          36.83218002319336,
+          -1.2806588841170317,
+        ],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {
+        'marker-color': '#7e7e7e',
+        'marker-size': 'medium',
+        'marker-symbol': 'circle-stroked',
+        title: 'Healthy Engine Mechanics',
+        img: 'https://ik.imagekit.io/ugyodiq15/Friendship-culminates-in-thriving-car-workshop-BUSINESS-PARTNERS-696x435_zgC5Am81x.jpg',
+        Phonenumber: '+254701137925',
+        rating: 0,
+        icon: 'car-repair',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [
+          36.81140899658203,
+          -1.2874378057993314,
+        ],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {
+        'marker-color': '#7e7e7e',
+        'marker-size': 'medium',
+        'marker-symbol': 'circle-stroked',
+        title: 'Connected Autoshop',
+        img: 'https://ik.imagekit.io/ugyodiq15/Friendship-culminates-in-thriving-car-workshop-BUSINESS-PARTNERS-696x435_zgC5Am81x.jpg',
+        Phonenumber: '+254701137925',
+        rating: 0,
+        icon: 'car-repair',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [
+          36.84041976928711,
+          -1.2899262662028559,
+        ],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {
+        'marker-color': '#7e7e7e',
+        'marker-size': 'medium',
+        'marker-symbol': 'circle-stroked',
+        title: 'Total Autoshop',
+        img: 'https://ik.imagekit.io/ugyodiq15/Friendship-culminates-in-thriving-car-workshop-BUSINESS-PARTNERS-696x435_zgC5Am81x.jpg',
+        Phonenumber: '+254701137925',
+        rating: 0,
+        icon: 'car-repair',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [
+          36.831321716308594,
+          -1.2690746094145051,
+        ],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {
+        'marker-color': '#7e7e7e',
+        'marker-size': 'medium',
+        'marker-symbol': 'circle-stroked',
+        title: 'AudreyM Autoshop',
+        img: 'https://ik.imagekit.io/ugyodiq15/Friendship-culminates-in-thriving-car-workshop-BUSINESS-PARTNERS-696x435_zgC5Am81x.jpg',
+        Phonenumber: '+254701137925',
+        rating: 0,
+        icon: 'car-repair',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [
+          36.8239402770996,
+          -1.3043421267144832,
+        ],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {
+        'marker-color': '#7e7e7e',
+        'marker-size': 'medium',
+        'marker-symbol': 'circle-stroked',
+        title: 'Central Mechanics',
+        img: 'https://ik.imagekit.io/ugyodiq15/Friendship-culminates-in-thriving-car-workshop-BUSINESS-PARTNERS-696x435_zgC5Am81x.jpg',
+        Phonenumber: '+254701137925',
+        rating: 0,
+        icon: 'car-repair',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [
+          36.81964874267578,
+          -1.2922431064599436,
+        ],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {
+        'marker-color': '#7e7e7e',
+        'marker-size': 'medium',
+        'marker-symbol': 'circle-stroked',
+        title: 'Komp Autoshop',
+        img: 'https://ik.imagekit.io/ugyodiq15/Friendship-culminates-in-thriving-car-workshop-BUSINESS-PARTNERS-696x435_zgC5Am81x.jpg',
+        Phonenumber: '+254701137925',
+        rating: 0,
+        icon: 'car-repair',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [
+          36.824026107788086,
+          -1.2782562240223017,
+        ],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {
+        'marker-color': '#7e7e7e',
+        'marker-size': 'medium',
+        'marker-symbol': 'circle-stroked',
+        title: 'Freedom Mechanic',
+        img: 'https://ik.imagekit.io/ugyodiq15/Friendship-culminates-in-thriving-car-workshop-BUSINESS-PARTNERS-696x435_zgC5Am81x.jpg',
+        Phonenumber: '+254701137925',
+        rating: 0,
+        icon: 'car-repair',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [
+          36.81235313415527,
+          -1.30296919116185,
+        ],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {
+        'marker-color': '#7e7e7e',
+        'marker-size': 'medium',
+        'marker-symbol': 'circle-stroked',
+        title: 'Green Tank Autoshop',
+        img: 'https://ik.imagekit.io/ugyodiq15/Friendship-culminates-in-thriving-car-workshop-BUSINESS-PARTNERS-696x435_zgC5Am81x.jpg',
+        Phonenumber: '+254701137925',
+        rating: 0,
+        icon: 'car-repair',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [
+          36.80145263671875,
+          -1.2807446933644824,
+        ],
+      },
+    },
         ],
           },
         },

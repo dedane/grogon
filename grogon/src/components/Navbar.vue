@@ -56,7 +56,7 @@
       </v-card-actions>
     </v-card>
   </v-dialog> -->
-  <v-btn v-if='!isLoggedIn'
+  <v-btn v-if= '!isLoggedIn'
   color='black' dark v-on:click="logout">
     Logout
   </v-btn>
@@ -79,7 +79,7 @@
 export default {
   data: () => ({
     dialog: false,
-    isLoggedIn: false,
+    isLoggedIn: true,
     currentUser: false,
   }),
   methods: {

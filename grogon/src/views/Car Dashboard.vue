@@ -226,7 +226,7 @@
 import Header from '@/components/Navbar.vue';
 import Footer from '../components/Footer.vue';
 /* import Drawer from '@/components/Drawer.vue'; */
-import Maps from '../components/Maps.vue';
+import Maps from '../components/MechanicMap.vue';
 
 export default {
   name: 'Car Dashboard',
