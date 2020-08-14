@@ -14,13 +14,13 @@
     text>
     Home
     </v-btn>
-    <v-btn v-if='!isloggedIn'
+    <v-btn v-if='isloggedIn'
     class='text-center mx-2 black--text'
     @click="$router.push('/MechDash')"
     text>
     Mechanic
     </v-btn>
-    <v-btn v-if='!isloggedIn'
+    <v-btn v-if='isloggedIn'
     class='text-center mx-2 black--text'
     @click="$router.push('/CarDash')"
     text>
@@ -56,7 +56,7 @@
       </v-card-actions>
     </v-card>
   </v-dialog> -->
-  <v-btn v-if= '!isLoggedIn'
+  <v-btn v-if= 'currentUser'
   color='black' dark v-on:click="logout">
     Logout
   </v-btn>
@@ -79,8 +79,8 @@
 export default {
   data: () => ({
     dialog: false,
-    isLoggedIn: true,
-    currentUser: false,
+    isLoggedIn: false,
+    currentUser: true,
   }),
   methods: {
     logout() {
