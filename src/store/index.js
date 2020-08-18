@@ -173,7 +173,7 @@ export default new Vuex.Store({
       return new Promise((resolve, reject) => {
         commit('updateDriver');
         // eslint-disable-next-line no-template-curly-in-string
-        axios.patch('/driver/register/${payload._id}', payload)
+        axios.patch('/driver/register/${payload}', payload)
           .then((resp) => {
             const { token } = resp.data;
             /* const { user } = resp.data; */
