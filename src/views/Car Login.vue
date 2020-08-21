@@ -17,7 +17,7 @@
           <v-form @submit.prevent="login">
             <v-text-field
             label='Email'
-            v-model='Email'
+            v-model='email'
             :rules='emailRules'
             append-icon='mdi-email'
             filled>
@@ -27,7 +27,7 @@
             :type="show2 ? 'text': 'password'"
             @click:append="show2 = !show2"
             label='Password'
-            v-model='Password'
+            v-model='password'
             filled>
             </v-text-field>
             <v-row align='center' justify='center'>
@@ -47,13 +47,13 @@
 export default {
   name: 'Car Login',
   data: () => ({
-    Email: '',
+    email: '',
     show2: false,
     emailRules: [
       (v) => !!v || 'E-mail must be valid',
       (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid',
     ],
-    Password: '',
+    password: '',
     errors: [],
     passwordRules: [
       (v) => !!v || 'Password is required',
@@ -63,12 +63,13 @@ export default {
   methods: {
     login() {
       this.$store.dispatch('driverLogin', {
-        Email: this.Email,
-        Password: this.Password,
+        email: this.email,
+        password: this.password,
       })
-        .then(() => {
+        .then((data) => {
           this.$router.push('/CarDash');
           this.errors = [];
+          console.log(data);
         })
         .catch((err) => {
           console.log(err);

@@ -22,7 +22,7 @@
             </v-text-field>
             <v-text-field
             label='Email'
-            v-model='Email'
+            v-model='email'
             append-icon='mdi-email'
             filled>
             </v-text-field>
@@ -43,7 +43,7 @@
             :type="show2 ? 'text': 'password'"
             @click:append="show2 = !show2"
             label='Password'
-            v-model='Password'
+            v-model='password'
             filled>
             </v-text-field>
             <!-- <v-text-field
@@ -173,9 +173,9 @@ export default {
     submitForm() {
       this.$store.dispatch('driverRegistration', {
         Name: this.Name,
-        Email: this.Email,
+        email: this.email,
         /* VehicleImage: this.VehicleImage, */
-        Password: this.Password,
+        password: this.password,
         Phonenumber: this.Phonenumber,
         PurchaseDate: this.PurchaseDate,
         Carmake: this.Carmake,

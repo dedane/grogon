@@ -127,7 +127,7 @@
     </v-col>
       </v-row>
     </v-container>
-    <v-container >
+    <v-container v-if='drivers'>
        <v-row>
          <v-card max-width="600">
         <v-col class=''>
@@ -137,8 +137,8 @@
           <v-text>
             Milleage Covered
           </v-text>
-          <v-text>
-            20,000km
+          <v-text >
+            {{ drivers.Milleage }}
           </v-text>
         </v-col>
         </v-card >
@@ -150,8 +150,8 @@
             <v-text>
               Engine Oil
             </v-text>
-            <v-text>
-              30%
+            <v-text >
+              {{ drivers.Engineoil }}
             </v-text>
           </v-coL>
           <v-col class='ma-4'>
@@ -161,8 +161,8 @@
             <v-text>
               Battery Power
             </v-text>
-            <v-text>
-              50%
+            <v-text >
+              {{ drivers.Batterypower }}
             </v-text>
           </v-col>
         </v-card>
@@ -174,8 +174,8 @@
             <v-text>
               Fuel Capacity
             </v-text>
-            <v-text>
-              3.6L
+            <v-text >
+              {{ drivers.Fuel }}
             </v-text>
           </v-coL>
           <v-col >
@@ -185,8 +185,8 @@
             <v-text>
               Wheel Health
             </v-text>
-            <v-text>
-              70%
+            <v-text >
+              {{ drivers.Wheelhealth }}
             </v-text>
           </v-col>
         </v-card>
@@ -254,14 +254,29 @@ export default {
     };
   },
   computed: {
-    driver() {
-      const getItems = this.$cookies.get('user');
-      return getItems;
+    drivers() {
+      const getItems = this.$store.getters.loadedDriver(this.id)
+      return getItems
+      console.log(getItems)
     },
   },
+  /* created: {
+    if (this.driver.length === 0) {
+      this.$store.dispatch
+    }
+  } */
   methods: {
     updateDriver() {
+      const driverD = {
+        Batterypower: this.Batterypower,
+        Engineoil: this.Engineoil,
+        Fuel: this.Fuel,
+        Milleage: this.Milleage,
+        Nextservice: this.Nextservice,
+        Wheelhealth: this.Wheelhealth,
+      }
       this.$store.dispatch('EditDriver', {
+        id: this.driver.id,
         Batterypower: this.Batterypower,
         Engineoil: this.Engineoil,
         Fuel: this.Fuel,
@@ -271,19 +286,27 @@ export default {
       })
         .then((res) => {
           console.log(res.data);
-          this.updateDriver = false;
-          this.$cookies.set('user', res.data);
+          /* this.updateDriver = false;
+          this.$cookies.set('user', res.data); */
         })
         .catch((error) => {
           console.log(error);
         });
     },
-    /* updateDriver() {
-      // eslint-disable-next-line no-template-curly-in-string
-      // eslint-disable-next-line no-trailing-spaces
-      // eslint-disable-next-line max-len
-      // eslint-disable-next-line no-template-curly-in-string
-      axios.patch('/driver/register/${this.user_id}', {
+    /* updateDriver() { */
+    // eslint-disable-next-line no-template-curly-in-string
+    // eslint-disable-next-line no-trailing-spaces
+    // eslint-disable-next-line max-len
+    // eslint-disable-next-line no-template-curly-in-string
+    /* const config = {
+        // eslint-disable-next-line quote-props
+        // eslint-disable-next-line no-undef
+        headers: { 'Authorization': 'bearer' + token }, // eslint-disable-line prefer-template
+      };
+      console.log(config); */
+    // eslint-disable-next-line no-template-curly-in-string
+    /* axios.patch(`/driver/register/${this.driver.id}`, {
+    *//* //eslint-disable-line no-underscore-dangle
         Fuel: this.Fuel,
         Nextservice: this.Nextservice,
         Milleage: this.Milleage,
@@ -295,7 +318,8 @@ export default {
           // location.reload()
           console.log(res.data);
           this.edit = false;
-          this.$cookies.set('user', res.data);
+          this.$cookies.get('driver', res.data);
+          console.log(res.data);
           // this.errors = []
         })
         .catch((err) => {
